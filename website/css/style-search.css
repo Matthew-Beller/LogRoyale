@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding-top: 80px;
+}
+
+.top-menu {
+    display: flex;
+    justify-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+    position:fixed;
+    top: 0;
+    left: 0;
+    margin: auto;
+    right: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: flex-start;
+    width: 600px;
+    min-width: 300px; 
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #949597;
+}
+
+#search-bar-input {
+    background-color: #ffffff;
+    font-size: 12pt;
+    max-height: 40px;
+    outline: none;
+    border: none;
+    color: #323437;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 3%;
+    flex: 100%;
+}
+
+#search-icon {
+    color: #949597;
+    font-size: 12pt;
+}
+
+.form-submit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin-left: auto;
+    padding: 3%;
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+}
+
+.form-submit-button:hover {
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+    cursor: pointer;
+}
+
+#logo-link{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.logos {
+    max-height: 30px;
+}
+
+#log-royale-logo{
+    display: none;
+}
+
+.results-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 150.32px;
+    margin-top: 1%;
+}
+
+.results-cell {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    color: #323437;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16pt;
+    margin-left: 4%;
+}
+
+.results-cell:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.05);    
+}
+.cell-clan-name-and-icon {
+    display: flex;
+    justify-items: flex-start;
+    align-items: center;
+}
+
+.cell-clan-name {
+    color: #3590F3;
+}
+
+.cell-subtext {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1%;
+}
+
+.cell-clan-id {
+    min-width: 200px;
+}
+
+.cell-members {
+    min-width: 100px;
+}
+
+.footer{
+    display: flex;
+    width:100%;
+    background-color: #171717;
+    font-size: 10pt;
+    min-height: 50px;
+    outline: none;
+    border: none;
+    color: #949597;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer-text{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#supercell-fan-policy-link{
+    color:#171717;
+    font-size: 10pt;
+    height: 50px;
+    outline: none;
+    border: none;
+    color: #949597;
+}
+
+@media only screen and (max-width: 700px) {
+    .search-bar {
+        width: 92.3%;
+    }
+
+    .top-menu {
+        flex-direction: column;
+    }
+
+    body {
+        padding-top: 114px;
+    }
+
+    .results-cell {
+        margin-left: 3%;
+        min-width: 300px;
+    }
+
+    .results-box {
+        padding-left: 0;
+    }
+
+    .cell-subtext {
+        flex-direction: column;
+    }
+}
+
+@media (prefers-color-scheme: dark){
+    body{
+        background-color: #323437;
+    }
+    
+    .top-menu {
+        background-color: #323437;
+    }
+    
+    .search-bar {
+        background-color: #EEEEEE;
+        border: 1px solid black;
+    }
+    
+    #search-bar-input {
+        background-color: #EEEEEE;
+        outline: none;
+        border: none;
+        color: #323437;
+    }
+    
+    #search-icon {
+        color: #949597;
+    }
+        
+    #log-royale-logo {
+        max-height: 30px;
+    }
+    
+    .results-cell {
+        color: #EEEEEE;
+    }
+    
+    .results-cell:hover {
+        background-color: rgba(255, 255, 255, .05);    
+    }
+
+    #log-royale-logo-black{
+        display: none;
+    }
+
+    #log-royale-logo{
+        display: block;
+    }
+}

@@ -1,0 +1,406 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding-top: 80px;
+    overflow-x: hidden;
+}
+
+.top-menu {
+    display: flex;
+    justify-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+    position:fixed;
+    top: 0;
+    left: 0;
+    margin: auto;
+    right: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    z-index: 999;
+}
+
+.search-bar {
+    display: flex;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: flex-start;
+    width: 600px;
+    min-width: 300px; 
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #949597;
+}
+
+#search-bar-input {
+    background-color: #ffffff;
+    font-size: 12pt;
+    max-height: 40px;
+    outline: none;
+    border: none;
+    color: #323437;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 3%;
+    flex: 100%;
+}
+
+#search-icon {
+    color: #949597;
+    font-size: 12pt;
+}
+
+.form-submit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin-left: auto;
+    padding: 3%;
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+}
+
+.form-submit-button:hover {
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+    cursor: pointer;
+}
+
+#logo-link{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.logos {
+    max-height: 30px;
+}
+
+#log-royale-logo{
+    display: none;
+}
+
+.results-box {
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+.date-selection-boxes {
+    display: flex;
+    flex-direction: row;
+}
+
+#time-frame-dropdown {
+    order: 1;
+}
+
+#date-input {
+    order: 2;
+    max-width: 50%;
+    min-width: 300px;
+}
+
+#clan-canvas-wrapper {
+    display: flex;
+    max-width: 50%;
+}
+
+#clan-activity-chart {
+    max-width: 100%;
+    max-height: 300px;
+    min-width: 700px;
+}
+
+#player-activity-chart-wrapper {
+    display: flex;
+    max-width: 50%;
+}
+
+#player-activity-chart {
+    max-width: 100%;
+    max-height: 300px;
+    min-width: 700px;
+}
+
+#tracking-banner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-height: 50px;
+    background-color: #F13030;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+#tracking-banner-message {
+    margin-left: 2%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12pt;
+}
+
+#begin-tracking-button {
+    margin-left: 3%;
+    margin-right: 20px;
+    min-width: 100px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: rgb(30, 160, 30);
+    font-family: 'Roboto', sans-serif;
+    white-space: nowrap;
+}
+
+#begin-tracking-button:hover {
+    background-color: rgb(35, 165, 35);
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+    cursor: pointer;
+}
+
+.clan-info{
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.clan-info-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.clan-info-sub-text{
+    color: #949597;
+}
+
+#clan-name{
+    font-size: 20pt;
+}
+
+#clan-info-sub-box{
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+}
+
+#clan-description{
+    padding-bottom: 1%;
+}
+
+#info-table-wrapper{
+    overflow-x: scroll;
+}
+
+#info-table-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar */
+#info-table-wrapper {
+    -ms-overflow-style: none;  /* Internet Explorer and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.player-info-row{
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 1%;
+    text-align: left;
+}
+
+.year-count-row{
+    display: grid;
+    grid-template-columns: 200px 200px repeat(12, 60px);
+
+}
+
+.day-count-row{
+    display: grid;
+    grid-template-columns: 200px 200px repeat(24, 30px);
+       
+}
+
+.week-count-row{
+    display: grid;
+    grid-template-columns: 200px 200px repeat(7, 103px);
+   
+}
+.player-info-sub-row{
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    white-space: nowrap;
+    text-align: left;
+}
+
+tr:nth-child(even){
+    background-color: lightgrey;
+}
+
+.green{
+    background-color: green;
+    padding-top: .25%;
+}
+
+#activity-heat-map-wrapper{
+    margin-right: 2%;
+}
+
+#player-activity-chart{
+    padding-bottom: 350px;
+}
+
+.footer{
+    display: flex;
+    width:102%;
+    background-color: #171717;
+    font-size: 10pt;
+    min-height: 50px;
+    margin-left: -2%;
+    outline: none;
+    border: none;
+    color: #949597;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer-text{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#supercell-fan-policy-link{
+    color:#171717;
+    font-size: 10pt;
+    height: 50px;
+    outline: none;
+    border: none;
+    color: #949597;
+}
+
+@media only screen and (max-width: 700px) {
+    .search-bar {
+        width: 92.3%;
+    }
+
+    .top-menu {
+        flex-direction: column;
+    }
+
+    body {
+        padding-top: 114px;
+    }
+    #clan-activity-chart {
+        max-width: 100%;
+        min-width: 300px;
+    }
+
+    #player-activity-chart {
+        max-width: 100%;
+        min-width: 300px;
+    }
+
+    #player-activity-chart-wrapper {
+        display: inline;
+        max-width: 100%;
+    }
+
+    #clan-canvas-wrapper {
+        display: inline;
+        max-width: 100%;
+    }
+
+    #tracking-banner-message {
+        margin-left: 2%;
+        font-family: 'Roboto', sans-serif;
+        font-size: 10pt;
+    }
+
+    #clan-info-sub-box{
+        grid-template-columns: 200px 200px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #tracking-banner-message {
+        margin-left: 2%;
+        font-family: 'Roboto', sans-serif;
+        font-size: 8pt;
+    }
+
+    #clan-name{
+        font-size: 16pt;
+    }
+    .clan-info {
+        font-size: 8pt;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    body{
+        overflow-x: hidden;
+        overflow-y: visible;
+    }
+}
+
+@media (prefers-color-scheme: dark){
+    body{
+        background-color: #323437;
+    }
+    
+    .top-menu {
+        background-color: #323437;
+    }
+    
+    .search-bar {
+        background-color: #EEEEEE;
+        border: 1px solid black;
+    }
+    
+    #search-bar-input {
+        background-color: #EEEEEE;
+        color: #323437;
+    }
+    
+    .clan-info{
+        color:#EEEEEE;
+    }
+
+    .clan-info-sub-text{
+        color: #949597;
+    }
+
+    #log-royale-logo-black{
+        display: none;
+    }
+
+    #log-royale-logo{
+        display: block;
+    }
+
+    .player-info-row{
+        color: #EEEEEE;
+    }
+    .player-info-sub-row{
+        color: #EEEEEE;
+    }
+
+    tr:nth-child(even){
+        background-color: grey;
+    }
+}
